@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+
+<style type="text/css">
+    fieldset:nth-child(1){background-image: url(../images/mine/set1.png) ;
+                            width: 500px;
+                            padding: 0px -20px 0px 40px;
+    }  
+    fieldset:nth-child(2){background-image: url(../images/mine/set2.png) ;
+                            width: 500px;
+    }  
+    fieldset:nth-child(3){background-image: url(../images/mine/set3.png) ;
+                            width: 500px;
+    }  
+    fieldset:last-of-type{background-image: url(../images/mine/set4.png) ;
+                            width: 500px;
+    }  
+
+    li {text-align: center; margin: 10px; list-style: none;}
+    
+    legend{font-family: sans-serif;
+           font-size: 17px;
+           color: white;
+            border: 5px solid #E0878B;
+            background: #E0878B;
+            text-align: center;
+            border-radius: 20px;
+    }
+    fieldset {margin: 10px; border-radius: 10px;}
+    fieldset:last-of-type {text-align: center;}
+    
+    label { color:#B9315D ;
+            background: white;
+        border-radius: 10px;
+        border : 3px solid rgba( 255, 255, 255, 0.5 );
+        background-color: rgba( 255, 255, 255, 0.5 );
+        font-size: 15px;
+        text-align: right;
+    }
+
+    
+    fieldset:last-of-type>input {
+        background: white;
+        border-radius: 10px;
+        border: none;
+        
+                    }
+    
+</style>
+    
+    
+</head>
+<body>
+
+<form action="hihi.jsp" method='get'> <!-- jsp는 웹 서버 관련된 java 파일 현재 없는 파일명이기 때문에 에러날 것 -->
+	<fieldset>
+		<legend>로그인 정보</legend>
+		<ol>
+			<li>
+				<label for='id'>아이디</label>  <!-- for와 id는 속성값 맞춰주기 -->
+				<input type='text'id='id' name='id' />
+			</li>
+			<li>
+				<label for='pw'>비밀번호</label>
+				<input type='text' id='pw' name='password'/>
+			</li>
+			<li>
+				<label for='pw_con'>비밀번호 확인</label>
+				<input type='text' id='pw_con' name='password_confirm'/>
+			</li>
+			<li>
+				<label for='grade'>회원 등급</label>
+				<input type='text' list='allgrade'id='pw_con' name='password_confirm'/>
+				<datalist id='allgrade'>
+					<option value='준회원'/>
+					<option value='일반회원'/>
+					<option value='열심회원'/>
+					<option value='단골회원'/>
+				</datalist>
+			</li>
+		</ol>
+	</fieldset>
+    
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ol>
+            <li>
+                <label for='name'>이름</label>
+                <input type='text' id='name' name='name' placeholder="5자미만 공백없이" /> 
+            </li>
+            <li>
+                <label for='email'>메일주소</label>
+                <input type='text' id='email' name='email' placeholder="abcd@domain.com" /> 
+            </li>
+            <li>   
+                <label for='tel'>연락처</label>
+                <input type='text' id='tel' name='tel' /> 
+            </li>
+            <li>   
+                <label for='birth'>생일</label>
+                <input type='text' id='birth' name='birth' value='연도-월-일'/> 
+            </li>
+        </ol>
+        
+    </fieldset>
+    
+    <fieldset>
+        <legend>코딩 숙련도(상,중,하)</legend>
+        <ol>
+            <li>
+                <input type="range" max="100" min="0" step="1" value="50"/>
+            </li>
+        </ol>
+    
+        
+    </fieldset>
+    
+    <fieldset>
+         <input type='submit' value='제출'/>
+    </fieldset>
+</form>
+
+</body>
+</html>
